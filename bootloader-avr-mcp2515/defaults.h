@@ -73,7 +73,7 @@
 #endif
 
 #ifndef MCP2515_BITRATE
-    #define MCP2515_BITRATE     125
+    #define MCP2515_BITRATE     50
 #endif
 
 #ifndef MCP2515_INTERRUPTS
@@ -254,7 +254,12 @@
 #ifndef MCP2515_BITRATE
     #error  MCP2515_BITRATE not defined!
 #else
-    #if MCP2515_BITRATE == 125
+    #if MCP2515_BITRATE == 50
+        // 50 kbps  --- NOT TESTED
+        #define R_CNF3 0x04
+        #define R_CNF2 0xb6
+        #define R_CNF1 0xc7 
+    #elif MCP2515_BITRATE == 125
         // 125 kbps
         #define R_CNF3  ((1<<PHSEG21))
         #define R_CNF2  ((1<<BTLMODE)|(1<<PHSEG11))
