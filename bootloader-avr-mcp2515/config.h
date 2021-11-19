@@ -11,7 +11,7 @@
 
 #define BOOTLOADER_TYPE     0
 
-#define BOOT_LED            B,1
+//#define BOOT_LED            B,1
 
 //#define   BOOT_INIT
 //#define   BOOT_LED_SET_OUTPUT
@@ -21,5 +21,5 @@
 
 // CAN Settings
 
-#define MCP2515_CS          B,4
-#define MCP2515_INT         B,2
+#define MCP2515_CS          B,2
+#define MCP2515_INT         B,1
